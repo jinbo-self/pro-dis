@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "../protos";
+
+service DataNode {
+    rpc WriteFile(WriteRequest) returns (WriteReply);       //写入文件，客户端调用
+    rpc ReadFile(ReadRequest) returns (ReadReply);          //读取文件，客户端调用
+    rpc HearHeart(HeartRequest)returns(HeartResponse);      //监听心跳，由元数据服务调用
+    rpc LocalObject(LocalRequest)returns(LocalReply);       //定位文件是否存在，暂时没用上
+}
+message LocalRequest{
+    string filename=1;
+}
+message LocalReply{
+    string success=1;
+}
+
+message HeartRequest{}
+message HeartResponse{
+    uint64 size = 1;
+}
+
+message WriteRequest {
+    string filename = 1;
+    bytes  data = 2;
+    string hash = 3;
+    string account=4;
+    string prehash=5;
+    int64 id = 6;
+    int64 size = 7;
+}
+message WriteReply {}
+
+message ReadRequest {
+    string hash = 1;
+}
+message ReadReply {
+    bytes data = 1;
+}
+

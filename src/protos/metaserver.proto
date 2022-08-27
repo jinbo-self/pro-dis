@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "../protos";
+
+
+service MetaServer {
+   rpc ChooseDataServer(metaRequest)returns(metaReply); //由客户端调用，选择一个数据服务的地址来存储文件
+   rpc StoreStatus(StoreStatusReply)returns(Status);   //由数据端调用时，数据端存储成功就返回文件名和数据端ip，并用kv存储到元数据服务，客户端删除时也可调用
+   rpc GetMetaInfo(GetMetaInfoRequest)returns(StoreStatusReply);//客户端调用，将元数据存储的元数据信息返回给客户端
+}
+message GetMetaInfoRequest{
+    string FileName = 1;
+    string Account =2;
+    int64 Version = 3;
+    string Hash =4;  //put时调用，检查文件是否已经存在
+    int64 flag = 5;  //标志位，1为查询文件是否存在，否则就是正常获取元数据信息
+}
+
+message Status{}
+
+//元数据存储的信息
+message StoreStatusReply{
+    string name = 1;
+    string addr =2 ;
+    int64 version =3;
+    string hash = 4;
+    string account = 5;
+    string prehash = 6;
+    int64 id =7;
+    int64 size = 8;
+}
+message metaRequest{}
+
+message metaReply{
+    string addr =1;
+}

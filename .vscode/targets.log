@@ -1,0 +1,371 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.82.90
+# Built for i686-pc-mingw32
+# Copyright (C) 1988-2012 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Fri Aug 26 19:53:47 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# makefile
+MAKEFLAGS = Rrqp
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# makefile
+CURDIR := e:/goproject/src/github.com/jinbo 
+-self/project5-myproject
+# default
+SHELL := sh.exe
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"C:\\Users\\Administrator\\AppData\\Roaming\\Code\\clp\\cc0490d1397af23dc5bf44a96fe15dbb.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\Administrator\\AppData\\Roaming\\Code\\clp\\cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\Administrator\\AppData\\Roaming\\Code\\clp\\cc0490d1397af23dc5bf44a96fe15dbb.zh-cn\\e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"C:\\Users\\Administrator\\AppData\\Roaming\\Code\\clp\\cc0490d1397af23dc5bf44a96fe15dbb.zh-cn\\corrupted.info","_languagePackSupport":true}
+# environment
+PYCHARM COMMUNITY EDITION = D:\PyCharm Community Edition 2022.1\bin;
+# environment
+ONEDRIVE = C:\Users\Administrator\OneDrive
+# environment
+CUDA_PATH_V10_0 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+TMP = C:\Users\Administrator\AppData\Local\Temp
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_CWD = D:\Microsoft VS Code
+# environment
+GOPROXY = https://goproxy.cn,direct
+# environment
+PATH = D:\VMware\VMware Workstation\bin\;D:\Miniconda3;D:\Miniconda3\Library\mingw-w64\bin;D:\Miniconda3\Library\usr\bin;D:\Miniconda3\Library\bin;D:\Miniconda3\Scripts;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;D:\Xshell 6\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Xftp 6\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Polyspace\R2021a\runtime\win64;D:\Polyspace\R2021a\bin;D:\Polyspace\R2021a\polyspace\bin;D:\Polyspace\R2021a\extern\lib\win64\microsoft;D:\Polyspace\R2021a\bin\win64;E:\goproject;D:\Go1.18\bin;D:\Git\cmd;D:\ErlangOTP\bin;E:\goproject\bin;D:\MinGW\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\desktop\pro.exe\opencv\build\x64\vc14\bin;D:\PyCharm Community Edition 2022.1\bin;;D:\Microsoft VS Code\bin;C:\Users\Administrator\go\bin;E:\goproject\bin;D:\MinGW\bin;
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\Administrator
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+GOPATH = E:\goproject
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19088_XJEHUBEEZRHQKBXM
+# environment
+COMPUTERNAME = WIN-IG3SBCMFC2B
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+NVCUDASAMPLES_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Administrator
+# environment
+PUBLIC = C:\Users\Public
+# environment
+GOMODCACHE = E:\goproject\pkg\mod
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Administrator\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\WIN-IG3SBCMFC2B
+# environment
+ONEDRIVECONSUMER = C:\Users\Administrator\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = WIN-IG3SBCMFC2B
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default 
+
+MAKECMDGOALS := all
+# default
+MAKE_VERSION := 3.82.90
+# makefile
+.DEFAULT_GOAL := SDSS-ctl
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+LOCALAPPDATA = C:\Users\Administrator\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\9e7283c68e6159fd1e9872b65f264be5-1.70.2-main-sock
+# environment
+HOMEPATH = \Users\Administrator
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+SYSTEMROOT = C:\Windows
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# environment
+NVCUDASAMPLES10_0_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Administrator\AppData\Roaming
+# environment
+TEMP = C:\Users\Administrator\AppData\Local\Temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# default
+MAKEFILES := 
+# environment
+ERLANG_HOME = D:\ErlangOTP
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# e 
+nvironment
+CUDA_PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = a502
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+VSCODE_PID = 19088
+# environment
+USERDOMAIN_ROAMINGPROFILE = WIN-IG3SBCMFC2B
+# variable set hash-table stats:
+# Load=93/1024=9%, Rehash=0, Collisions=13/114=11%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# : could not be stat'd.
+# D:\Polyspace\R2021a\polyspace\bin (key D:/Polyspace/R2021a/polyspace/bin, mtime 1650935206): 85 files, no impossibilities.
+# D:\Go1.18\bin (key D:/Go1.18/bin, mtime 1653368843): 4 files, no impossibilities.
+# C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR (key C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR, mtime 1650889597): 5 files, no impossibilities.
+# C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin (key C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.0/bin, mtime 1650893865): 42 files, no impossibilities.
+# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1649598687): 31 files, no impossibilities.
+# D:\Miniconda3 (key D:/Miniconda3, mtime 1651130320): 81 files, no impossibilities.
+# D:\Polyspace\R2021a\bin (key D:/Polyspace/R2021a/bin, mtime 1650935133): 20 files, no impossibilities.
+# . (key e:/goproject/src/github.com/jinbo-self/project5-myproject,  
+mtime 1661074406): 13 files, no impossibilities.
+# D:\Microsoft VS Code\bin (key D:/Microsoft VS Code/bin, mtime 1660785505): 4 files, no impossibilities.
+# D:\desktop\pro.exe\opencv\build\x64\vc14\bin: could not be stat'd.
+# E:\goproject (key E:/goproject, mtime 1660974801): 5 files, no impossibilities.
+# C:\Users\Administrator\go\bin: could not be stat'd.
+# D:\PyCharm Community Edition 2022.1\bin (key D:/PyCharm Community Edition 2022.1/bin, mtime 1651130593): 28 files, no impossibilities.
+# C:\Windows\Sy 
+stem32\OpenSSH\: could not be stat'd.
+# D:\Miniconda3\Library\usr\bin: could not be stat'd.
+# C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (key C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1650893828): 10 files, no impossibilities.
+# D:\Miniconda3\Library\bin (key D:/Miniconda3/Library/bin, mtime 1651130295): 67 files, no impossibilities.
+# D:\Miniconda3\Scripts (key D:/Miniconda3/Scripts, mtime 1651136410): 36 files, no impossibilities.
+# C:\Program Files\NVIDIA GPU Computing Too 
+lkit\CUDA\v10.0\libnvvp (key C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.0/libnvvp, mtime 1650893861): 14 files, no impossibilities.
+# D:\Xshell 6\ (key D:/Xshell 6/, mtime 1649726830): 37 files, no impossibilities.
+# D:\Miniconda3\Library\mingw-w64\bin: could not be stat'd.
+# C:\Windows (key C:/Windows, mtime 1661442058): 112 files, no impossibilities.
+# D:\ErlangOTP\bin (key D:/ErlangOTP/bin, mtime 1659346606): 15 files, no impossibilities.
+# D:\Polyspace\R2021a\runtime\win64 (key D:/Polyspace/R2021a/runtime/win64, mtime 1650935091): 10 files, no impossibilities.
+# D:\Xftp 6\ (key D:/Xftp 6/, mtime 1649727704): 27 files, no impossibilities.
+# C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps (key C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps, mtime 1659520270): 11 files, no impossibilities.
+# D:\Git\cmd (key D:/Git/cmd, mtime 1655199673): 8 files, no impossibilities.
+# E:\goproject\bin (key E:/goproject/bin, mtime 1660642344): 15 files, no impossibilities.
+# C:\Windows\Syste 
+m32\Wbem (key C:/Windows/System32/Wbem, mtime 1657794882): 154 files, no impossibilities.
+# D:\Polyspace\R2021a\extern\lib\win64\microsoft (key D:/Polyspace/R2021a/extern/lib/win64/microsoft, mtime 1650935457): 159 files, no impossibilities.
+# D:\VMware\VMware Workstation\bin\ (key D:/VMware/VMware Workstation/bin/, mtime 1658286399): 4 files, no impossibilities.
+# D:\Polyspace\R2021a\bin\win64 (key D:/Polyspace/R2021a/bin/win64, mtime 1650937263): 3132 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1660525165): 3032 files, no impossibilities.
+# D:\MinGW\bin (key D:/MinGW/bin, mtime 1660880109): 7 files, no impossibilities.
+
+# 7168 files, no impossibilities in 35 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all: proto
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+#  recipe to execute (from 'makefile', line 7):
+	go build -o bin/metaserver.exe metaserver/main.go
+	go build -o bin/dataserver.exe dataserver/main.go
+	go build -o bin/client.exe client/main.go
+
+.PHONY: all hello SDSS-ctl proto clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+prot 
+o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := proto
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'makefile', line 16):
+	go generate src/protos/gen.go
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-26 15:35:14
+#  File has been updated.
+#  Successfully updated.
+
+hello: proto
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 12):
+	go build -o bin/hello_server cmsrd/hello/server/main.go
+	go build -o bin/hello_client cmd/hello/client/main.go
+
+SDSS-ctl:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 4):
+	go build -o bin/SDSS-ctl src/ctl/main.go
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe t 
+o execute (from 'makefile', line 19):
+	rm bin/*
+
+# files hash-table stats:
+# Load=9/1024=1%, Rehash=0, Collisions=0/32=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 16 (14) / strings = 6876 / storage = 125793 B / avg = 18 B
+# current buf: size = 8174 B / used = 3279 B / count = 205 / avg = 15 B
+# other used: total = 117619 B / count = 6671 / avg = 17 B
+# other free: total = 96 B / max = 17 B / min = 1 B / avg = 6 B
+
+# strcache performance: lookups = 7228 / hit rate = 4%
+# hash-table stats:
+# Load=6876/8192=84%, Rehash=0, Collisions=8472/7228=117%
+# Finished Make data base on Fri Aug 26 19:53:47 2022
+
+ 

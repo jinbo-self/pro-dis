@@ -1,0 +1,1 @@
+.\metaserver.exe -m localhost:12345 -s localhost:9000,localhost:9001,localhost:9002,localhost:9003,localhost:9004,localhost:9005

@@ -1,0 +1,6 @@
+
+
+put->create
+create(size)return(几个block:size/block){
+	给每个block生成uuid
+}
