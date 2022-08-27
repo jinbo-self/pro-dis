@@ -102,15 +102,15 @@ func (c *client) Get() {
 		c.hash = hashs[i]
 		conn, err := grpc.Dial(c.addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 		if err != nil {
-			logrus.Panic("did not connect: %v", err)
-			return
+			logrus.Info("did not connect: %v", err)
+			continue
 		}
 		defer conn.Close()
 		client := protos.NewDataNodeClient(conn)
 		file, ferr := client.ReadFile(context.Background(), &protos.ReadRequest{Hash: c.hash})
 		if ferr != nil {
-			logrus.Panic(ferr)
-			return
+			logrus.Info(ferr)
+			continue
 		}
 
 		tmpFile = append(tmpFile, file.GetData())
