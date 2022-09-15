@@ -1,1 +1,1 @@
-{"buildTargets":[".PHONY","SDSS-ctl","all","clean","hello"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["SDSS-ctl","all","clean","hello","proto"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

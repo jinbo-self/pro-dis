@@ -1,1 +1,0 @@
-.\dataserver -addr localhost:9003 -m localhost:12345 

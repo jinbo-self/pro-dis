@@ -1,6 +1,5 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Entering directory 'e:/goproject/src/github.com/jinbo-self/project5-myproject'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/zhuge/Desktop/goproject/src/github.com/pro-dis'
 go build -o bin/SDSS-ctl src/ctl/main.go
- 
-make.exe: Leaving directory 'e:/goproject/src/github.com/jinbo-self/project5-myproject'
+make: Leaving directory '/home/zhuge/Desktop/goproject/src/github.com/pro-dis'
  

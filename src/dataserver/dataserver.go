@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"os/signal"
 	"strings"
 
 	"github.com/jinbo-self/project5-myproject/src/protos"
@@ -15,12 +16,11 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-const FileStorage = "tmp/objects/"
-
 type dataServer struct {
 	protos.UnimplementedDataNodeServer
 	addr     string //本地监听的地址
 	metaaddr string //元数据服务的地址，每次存储成功都需要返回文件的元数据
+	path     string //data本地存储路径
 
 }
 
@@ -52,7 +52,7 @@ func (s *dataServer) WriteFile(ctx context.Context, in *protos.WriteRequest) (*p
 	}
 	filename := in.GetHash()
 	logrus.Infof("start to create the file: %v", filename)
-	FilePath := FileStorage + filename
+	FilePath := s.path + filename
 	file, e := os.Create(FilePath)
 	if e != nil {
 		logrus.Infof("failed to create a file:%v", e)
@@ -85,7 +85,7 @@ func (s *dataServer) WriteFile(ctx context.Context, in *protos.WriteRequest) (*p
 func (s *dataServer) ReadFile(ctx context.Context, in *protos.ReadRequest) (*protos.ReadReply, error) {
 	filename := in.GetHash()
 	logrus.Infof("start to open the file: %v", filename)
-	f, e := os.ReadFile(FileStorage + filename)
+	f, e := os.ReadFile(s.path + filename)
 
 	if e != nil {
 		logrus.Infof("read a nil file:%v", e)
@@ -126,17 +126,18 @@ func (s *dataServer) HearHeart(ctx context.Context, in *protos.HeartRequest) (*p
 	return &protos.HeartResponse{Size: usage.Available()}, nil
 }
 
-func NewDataServer(addr, metaaddr string) *dataServer {
+func NewDataServer(addr, metaaddr, path string) *dataServer {
 
 	return &dataServer{
 		addr:     addr,
 		metaaddr: metaaddr,
+		path:     path,
 	}
 }
 
 //定位文件，判断文件是否存在
 func (s *dataServer) LocalObject(ctx context.Context, in *protos.LocalRequest) (*protos.LocalReply, error) {
-	_, err := os.Stat(FileStorage + in.GetFilename())
+	_, err := os.Stat(s.path + in.GetFilename())
 	if err != nil {
 		logrus.Infof("failed to locate the file:%v", err)
 		return &protos.LocalReply{Success: ""}, err
@@ -151,7 +152,21 @@ func (s *dataServer) Setup() {
 	if err != nil {
 		logrus.Infof("failed to listen the program")
 	}
+	idleClosed := make(chan struct{})
+	go func() {
+		sign := make(chan os.Signal, 1)
+		signal.Notify(sign, os.Interrupt)
+		<-sign
+
+		lis.Close()
+		close(idleClosed)
+		close(sign)
+
+	}()
+
 	server := grpc.NewServer()
 	protos.RegisterDataNodeServer(server, s)
 	server.Serve(lis)
+	<-idleClosed //阻塞
+
 }
