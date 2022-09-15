@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"os/signal"
 	"strings"
 
 	"github.com/jinbo-self/project5-myproject/src/protos"
@@ -152,21 +151,9 @@ func (s *dataServer) Setup() {
 	if err != nil {
 		logrus.Infof("failed to listen the program")
 	}
-	idleClosed := make(chan struct{})
-	go func() {
-		sign := make(chan os.Signal, 1)
-		signal.Notify(sign, os.Interrupt)
-		<-sign
-
-		lis.Close()
-		close(idleClosed)
-		close(sign)
-
-	}()
 
 	server := grpc.NewServer()
 	protos.RegisterDataNodeServer(server, s)
 	server.Serve(lis)
-	<-idleClosed //阻塞
 
 }
